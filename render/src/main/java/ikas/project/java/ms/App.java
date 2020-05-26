@@ -6,6 +6,7 @@ import com.mitchellbosecke.pebble.loader.FileLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
@@ -54,15 +55,18 @@ public class App {
         Files.walkFileTree(templateFolder, new SimpleFileVisitor<>() {
             @Override
             public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                var template = engine.getTemplate(file.toAbsolutePath().toString());
+                L.debug(() -> template.getName());
+
                 var outFile = docsFolder.resolve(file.getFileName());
                 L.debug(() -> outFile.toAbsolutePath().toString());
 
                 //evaluate
-                var writer = Files.newBufferedWriter(outFile, StandardOpenOption.CREATE);
-                var template = engine.getTemplate(file.toAbsolutePath().toString());
-                L.debug(() -> template.getName());
-
-                template.evaluate(writer, data);
+                try (var writer = Files.newBufferedWriter(outFile, StandardOpenOption.CREATE)) {
+                    template.evaluate(writer, data);
+                } catch (IOException e) {
+                    L.error(file.toAbsolutePath().toString(), e);
+                }
                 return FileVisitResult.CONTINUE;
             }
 
