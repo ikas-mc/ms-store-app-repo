@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>windows 10 store app</title>
+</head>
+
+<body>
+<div>
+    <ul>
+        {% for app in apps %}
+        <li>
+            <div>
+                <h1>{{ app.name }} </h1>
+                <h3>{{ app.desc }} </h3>
+                <div>{{ app.category }}</div>
+                <img src="{{ app.productImage }}">
+                <div>
+                    <a href="{{ app.url }}">{{ app.productId }} </a>
+                    <pre>{{ app.winget }}</pre>
+                </div>
+                {% for img in app.previewImages %}
+                <img src="{{ img }}">
+                {% endfor %}
+            </div>
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
+</body>
+</html>
