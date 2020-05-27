@@ -43,7 +43,7 @@ public class App {
                 L.error(f.toAbsolutePath().toString(), e);
             }
             return null;
-        }).filter(o -> null != o).collect(Collectors.toList());
+        }).filter(o -> null != o).collect(Collectors.groupingBy(f->f.getOrDefault("category","other")));
 
         L.debug(apps);
 
