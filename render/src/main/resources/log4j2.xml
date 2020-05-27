@@ -2,7 +2,7 @@
 <Configuration status="debug">
     <Appenders>
         <Console name="CONSOLE" target="SYSTEM_OUT">
-            <PatternLayout pattern="%-5level %d  %c %M()/%L - %m%n"/>
+            <PatternLayout pattern="[%highlight{%-5level}] %d{yyyy-MM-dd HH:mm:ss.SSS}  [%t] %highlight{%c{1.}.%M(%L)}: %msg%n"/>
         </Console>
 
         <Async name="ASYNC" includeLocation="true">
