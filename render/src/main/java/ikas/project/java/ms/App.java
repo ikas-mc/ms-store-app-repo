@@ -62,7 +62,7 @@ public class App {
                 L.debug(() -> outFile.toAbsolutePath().toString());
 
                 //evaluate
-                try (var writer = Files.newBufferedWriter(outFile, StandardOpenOption.CREATE)) {
+                try (var writer = Files.newBufferedWriter(outFile, StandardOpenOption.CREATE_NEW)) {
                     template.evaluate(writer, data);
                 } catch (IOException e) {
                     L.error(file.toAbsolutePath().toString(), e);
