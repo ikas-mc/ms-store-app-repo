@@ -6,7 +6,6 @@ import com.mitchellbosecke.pebble.loader.FileLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
@@ -21,7 +20,7 @@ import java.util.stream.Collectors;
  */
 public class App {
 
-    public static Logger L = LogManager.getLogger(App.class);
+    public final static Logger L = LogManager.getLogger(App.class);
 
     public static void main(String[] args) throws IOException {
         L.info("start");
@@ -59,6 +58,7 @@ public class App {
                 L.debug(() -> template.getName());
 
                 var outFile = docsFolder.resolve(file.getFileName());
+                Files.deleteIfExists(outFile);
                 L.debug(() -> outFile.toAbsolutePath().toString());
 
                 //evaluate
