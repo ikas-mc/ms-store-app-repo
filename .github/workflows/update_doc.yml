@@ -1,0 +1,31 @@
+
+name: Update Doc
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 14
+      uses: actions/setup-java@v1
+      with:
+        java-version: 14
+    - name: workspace 
+      run: cd ./render
+    - name: Build with Maven
+      run: mvn compile
+    - name: run
+      run: mvn exec:java  -Dlog4j.skipJansi=false -Dexec.mainClass=ikas.project.java.ms.App 
+    - uses: seanmiddleditch/gha-publish-to-git@master
+      with:
+        branch: master
+        github_token: '${{ secrets.GITHUB_TOKEN  }}'
+        source_folder: .
+      if: success() && github.event == 'push'
+      
