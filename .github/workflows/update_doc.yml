@@ -15,9 +15,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 14
-    - name: Build with Maven
+    - name: build and run render
       run: cd ./render && mvn compile && mvn exec:java  -Dlog4j.skipJansi=false -Dexec.mainClass=ikas.project.java.ms.App 
-    - name: set git env
+    - name: commit
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
