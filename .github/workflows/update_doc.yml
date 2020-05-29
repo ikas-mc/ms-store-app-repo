@@ -19,10 +19,18 @@ jobs:
       run: cd ./render && mvn compile
     - name: update doc
       run: cd ./render && mvn exec:java  -Dlog4j.skipJansi=false -Dexec.mainClass=ikas.project.java.ms.App 
-    - uses: seanmiddleditch/gha-publish-to-git@master
-      with:
-        branch: master
-        github_token: '${{ secrets.GITHUB_TOKEN  }}'
-        source_folder: .
-      if: success() && github.event == 'push'
+    - name: set git env
+      env:
+          ACTION_DEPLOY_KEY: ${{secrets.ACTION_DEPLOY_KEY}}
+      run: |
+          mkdir -p ~/.ssh/
+          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.name "Actions"
+          git config --global user.email "Actions"
+    - name: commit
+      run: | 
+          git commint -m "Github Actions Update Doc" 
+          git push  
       
