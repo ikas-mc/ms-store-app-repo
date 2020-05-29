@@ -16,12 +16,10 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 14
-    - name: workspace 
-      run: cd ./render
     - name: Build with Maven
-      run: mvn compile
-    - name: run
-      run: mvn exec:java  -Dlog4j.skipJansi=false -Dexec.mainClass=ikas.project.java.ms.App 
+      run: cd ./render && mvn compile
+    - name: update doc
+      run: cd ./render && mvn exec:java  -Dlog4j.skipJansi=false -Dexec.mainClass=ikas.project.java.ms.App 
     - uses: seanmiddleditch/gha-publish-to-git@master
       with:
         branch: master
