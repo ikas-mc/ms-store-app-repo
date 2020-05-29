@@ -21,18 +21,12 @@ jobs:
       run: cd ./render && mvn exec:java  -Dlog4j.skipJansi=false -Dexec.mainClass=ikas.project.java.ms.App 
     - name: set git env
       env:
-          ACTION_DEPLOY_KEY: ${{secrets.SAKIX}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.name "Actions"
           git config --global user.email "Actions"
-    - name: commit
-      run: | 
-          remote remove "origin"
-          remote add "origin" "git@github.com:ikas-mc/ms-store-app-repo.git"	
-          git commint -m "Github Actions Update Doc" 
-          git push  
+          git commit -m "update by Github Actions " 
+          git remote remove "origin"
+          git remote set-url --push origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITOR
+          git push origin master
       
