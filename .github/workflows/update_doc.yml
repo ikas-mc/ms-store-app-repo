@@ -25,8 +25,8 @@ jobs:
       run: |
           git config --global user.name "Actions"
           git config --global user.email "Actions"
-          git commit -m "update by Github Actions " 
+          git commit -a -m "update by Github Actions " 
           git remote remove "origin"
-          git remote set-url --push origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITOR
+          git remote set-url --push origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/ms-store-app-repo
           git push origin master
       
