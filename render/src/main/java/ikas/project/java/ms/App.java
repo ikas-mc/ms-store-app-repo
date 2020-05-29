@@ -26,7 +26,7 @@ public class App {
         L.info("start");
 
         //
-        var projectPath = Paths.get("..\\");
+        var projectPath = Paths.get("..");
         L.debug(() -> projectPath.toAbsolutePath().toString());
 
         var repoFolder = projectPath.resolve("repo");
