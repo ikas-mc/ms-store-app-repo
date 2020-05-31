@@ -15,18 +15,15 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 14
-    - name: Build with Maven
-      run: cd ./render && mvn compile
-    - name: update doc
-      run: cd ./render && mvn exec:java  -Dlog4j.skipJansi=false -Dexec.mainClass=ikas.project.java.ms.App 
-    - name: set git env
+    - name: build and run render
+      run: cd ./render && mvn compile && mvn exec:java  -Dlog4j.skipJansi=false -Dexec.mainClass=ikas.project.java.ms.App 
+    - name: commit
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
           git config --global user.name "Actions"
           git config --global user.email "Actions"
-          git commit -m "update by Github Actions " 
-          git remote remove "origin"
-          git remote set-url --push origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITOR
+          git commit -a -m "update by Github Actions " 
+          git remote set-url --push origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/ikas-mc/ms-store-app-repo
           git push origin master
       
