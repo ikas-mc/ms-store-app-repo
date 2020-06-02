@@ -12,7 +12,6 @@
 
     <style>
         .sidebar {
-            position: -webkit-sticky;
             position: sticky;
             top: 0px;
             height: calc(100vh - 0rem);
@@ -21,173 +20,193 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-column-gap: 10px;
+        }
+
+        .item-container {
+            display: grid;
+            grid-template-columns: 150px auto;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+
+        }
+
+        
+        .item-img {
+            justify-self:center;
+            align-self: center;
+            width: 130px;;
+        }
+
+        .item-img img {
+            height: auto;
+            width: 100%;;
+        }
+
+
+        .category {
+            z-index: 99999;
+            position: sticky;
+            top: 0px;
+            background: white;
+        }
+
+        .shadow {
+            box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-md">
-        <div class="row">
-            <div class="col-md-2 sidebar">
+        <div class="main-container">
+            <div class="sidebar">
                 <header>APPS</header>
                 <ul class="nav flex-column">
-                                            <li class="nav-item">
-                            <a class="nav-link" href="#category-tools‬">tools‬</a>
-                        </li>
-                                            <li class="nav-item">
-                            <a class="nav-link" href="#category-Developer tools">Developer tools</a>
-                        </li>
-                                            <li class="nav-item">
-                            <a class="nav-link" href="#category-entertainment">entertainment</a>
-                        </li>
-                                            <li class="nav-item">
-                            <a class="nav-link" href="#category-productivity‬">productivity‬</a>
-                        </li>
-                                            <li class="nav-item">
-                            <a class="nav-link" href="#category-tools">tools</a>
-                        </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="#category-tools‬">tools‬</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="#category-Developer tools">Developer tools</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="#category-entertainment">entertainment</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="#category-productivity‬">productivity‬</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="#category-tools">tools</a>
+                    </li>
                                     </ul>
                 <footer>2020</footer>
             </div>
-            <div class="col-md-10">
-                                    <h3 id="category-tools‬">tools‬</h3>
+            <div class="">
+                                <h3 class="category" id="category-tools‬">tools‬</h3>
+                                <div class="item-container shadow">
+                    <div class="item-img">
+                        <img class="card-img rounded"  src="https://store-images.s-microsoft.com/image/apps.24649.13510798887974550.6cd05e21-7b01-4369-8d30-5fc6b61e8c9c.a820aa3e-fe3a-41ac-a0a5-899d57c3c8af?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
+                    </div>
+                    <div class="">
+                        <div class="card-body">
+                            <h5 class="card-title">TreeSize Free</h5>
+                            <p class="card-text"><small class="text-muted">tools‬</small></p>
+                            <p class="card-text">TreeSize Free tells you where precious disk space has gone</p>
+                            <pre></pre>
+                            <a href="https://www.microsoft.com/store/productId/9NBLGGH40881" data-product-id="9NBLGGH40881" class="btn btn-primary">安装</a>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" aria-expanded="false"
+                                aria-controls="preview-9NBLGGH40881"
+                                data-target="#preview-9NBLGGH40881">预览</button>
 
-                                        <div class="card shadow-sm mb-2 ">
-                        <div class="row no-gutters">
-                            <div class="col-md-2" style="max-width:150px;display: flex;align-items: center;">
-                                <img class="card-img rounded" style="height:auto;width:90%;" src="https://store-images.s-microsoft.com/image/apps.24649.13510798887974550.6cd05e21-7b01-4369-8d30-5fc6b61e8c9c.a820aa3e-fe3a-41ac-a0a5-899d57c3c8af?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
-                            </div>
-                            <div class="col-md-10">
-                                <div class="card-body">
-                                    <h5 class="card-title">TreeSize Free</h5>
-                                    <p class="card-text"><small class="text-muted">tools‬</small></p>
-                                    <p class="card-text">TreeSize Free tells you where precious disk space has gone</p>
-                                    <pre></pre>
-                                    <a href="https://www.microsoft.com/store/productId/9NBLGGH40881" data-product-id="9NBLGGH40881"
-                                        class="btn btn-primary">安装</a>
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                        aria-expanded="false" aria-controls="preview-9NBLGGH40881"
-                                        data-target="#preview-9NBLGGH40881">预览</button>
-
-                                    <div id="preview-9NBLGGH40881" class="collapse">
-                                        <div>
-                                                                                    </div>
-                                    </div>
-                                </div>
+                            <div id="preview-9NBLGGH40881" class="collapse">
+                                <div>
+                                                                    </div>
                             </div>
                         </div>
                     </div>
-                                                        <h3 id="category-Developer tools">Developer tools</h3>
+                </div>
+                                                <h3 class="category" id="category-Developer tools">Developer tools</h3>
+                                <div class="item-container shadow">
+                    <div class="item-img">
+                        <img class="card-img rounded"  src="https://store-images.s-microsoft.com/image/apps.43022.14342653579960902.940fae20-fb9a-47f6-b71d-9bbb99a5e739.d9a5a219-36c3-4fe6-adc0-90ca5ea32dff?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%23dedede">
+                    </div>
+                    <div class="">
+                        <div class="card-body">
+                            <h5 class="card-title">DBeaver CE</h5>
+                            <p class="card-text"><small class="text-muted">Developer tools</small></p>
+                            <p class="card-text">DBeaver is a universal database management tool for everyone who needs to work with data in a professional way.</p>
+                            <pre></pre>
+                            <a href="https://www.microsoft.com/store/productId/9pnkdr50694p" data-product-id="9pnkdr50694p" class="btn btn-primary">安装</a>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" aria-expanded="false"
+                                aria-controls="preview-9pnkdr50694p"
+                                data-target="#preview-9pnkdr50694p">预览</button>
 
-                                        <div class="card shadow-sm mb-2 ">
-                        <div class="row no-gutters">
-                            <div class="col-md-2" style="max-width:150px;display: flex;align-items: center;">
-                                <img class="card-img rounded" style="height:auto;width:90%;" src="https://store-images.s-microsoft.com/image/apps.43022.14342653579960902.940fae20-fb9a-47f6-b71d-9bbb99a5e739.d9a5a219-36c3-4fe6-adc0-90ca5ea32dff?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%23dedede">
-                            </div>
-                            <div class="col-md-10">
-                                <div class="card-body">
-                                    <h5 class="card-title">DBeaver CE</h5>
-                                    <p class="card-text"><small class="text-muted">Developer tools</small></p>
-                                    <p class="card-text">DBeaver is a universal database management tool for everyone who needs to work with data in a professional way.</p>
-                                    <pre></pre>
-                                    <a href="https://www.microsoft.com/store/productId/9pnkdr50694p" data-product-id="9pnkdr50694p"
-                                        class="btn btn-primary">安装</a>
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                        aria-expanded="false" aria-controls="preview-9pnkdr50694p"
-                                        data-target="#preview-9pnkdr50694p">预览</button>
-
-                                    <div id="preview-9pnkdr50694p" class="collapse">
-                                        <div>
-                                                                                    </div>
-                                    </div>
-                                </div>
+                            <div id="preview-9pnkdr50694p" class="collapse">
+                                <div>
+                                                                    </div>
                             </div>
                         </div>
                     </div>
-                                                        <h3 id="category-entertainment">entertainment</h3>
+                </div>
+                                                <h3 class="category" id="category-entertainment">entertainment</h3>
+                                <div class="item-container shadow">
+                    <div class="item-img">
+                        <img class="card-img rounded"  src="https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&amp;q=90&amp;h=300&amp;w=200">
+                    </div>
+                    <div class="">
+                        <div class="card-body">
+                            <h5 class="card-title">哔哩哔哩动画</h5>
+                            <p class="card-text"><small class="text-muted">entertainment</small></p>
+                            <p class="card-text">官方客户端</p>
+                            <pre></pre>
+                            <a href="https://www.microsoft.com/store/productId/9NBLGGH5Q5FV" data-product-id="9NBLGGH5Q5FV" class="btn btn-primary">安装</a>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" aria-expanded="false"
+                                aria-controls="preview-9NBLGGH5Q5FV"
+                                data-target="#preview-9NBLGGH5Q5FV">预览</button>
 
-                                        <div class="card shadow-sm mb-2 ">
-                        <div class="row no-gutters">
-                            <div class="col-md-2" style="max-width:150px;display: flex;align-items: center;">
-                                <img class="card-img rounded" style="height:auto;width:90%;" src="https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&amp;q=90&amp;h=300&amp;w=200">
-                            </div>
-                            <div class="col-md-10">
-                                <div class="card-body">
-                                    <h5 class="card-title">哔哩哔哩动画</h5>
-                                    <p class="card-text"><small class="text-muted">entertainment</small></p>
-                                    <p class="card-text">官方客户端</p>
-                                    <pre></pre>
-                                    <a href="https://www.microsoft.com/store/productId/9NBLGGH5Q5FV" data-product-id="9NBLGGH5Q5FV"
-                                        class="btn btn-primary">安装</a>
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                        aria-expanded="false" aria-controls="preview-9NBLGGH5Q5FV"
-                                        data-target="#preview-9NBLGGH5Q5FV">预览</button>
-
-                                    <div id="preview-9NBLGGH5Q5FV" class="collapse">
-                                        <div>
-                                                                                        <img src="https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&amp;q=90&amp;h=300&amp;w=200">
-                                                                                    </div>
-                                    </div>
-                                </div>
+                            <div id="preview-9NBLGGH5Q5FV" class="collapse">
+                                <div>
+                                                                        <img src="https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&amp;q=90&amp;h=300&amp;w=200">
+                                                                    </div>
                             </div>
                         </div>
                     </div>
-                                                        <h3 id="category-productivity‬">productivity‬</h3>
+                </div>
+                                                <h3 class="category" id="category-productivity‬">productivity‬</h3>
+                                <div class="item-container shadow">
+                    <div class="item-img">
+                        <img class="card-img rounded"  src="https://store-images.s-microsoft.com/image/apps.55095.14405803611253731.a92873b0-37c2-4797-8970-49361565e95d.bd12e7f3-de6c-44b1-af99-567b9904c033?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
+                    </div>
+                    <div class="">
+                        <div class="card-body">
+                            <h5 class="card-title">QuickLook</h5>
+                            <p class="card-text"><small class="text-muted">productivity‬</small></p>
+                            <p class="card-text">QuickLook 空格快速预览</p>
+                            <pre></pre>
+                            <a href="https://www.microsoft.com/store/productId/9NV4BS3L1H4S" data-product-id="9NV4BS3L1H4S" class="btn btn-primary">安装</a>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" aria-expanded="false"
+                                aria-controls="preview-9NV4BS3L1H4S"
+                                data-target="#preview-9NV4BS3L1H4S">预览</button>
 
-                                        <div class="card shadow-sm mb-2 ">
-                        <div class="row no-gutters">
-                            <div class="col-md-2" style="max-width:150px;display: flex;align-items: center;">
-                                <img class="card-img rounded" style="height:auto;width:90%;" src="https://store-images.s-microsoft.com/image/apps.55095.14405803611253731.a92873b0-37c2-4797-8970-49361565e95d.bd12e7f3-de6c-44b1-af99-567b9904c033?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
-                            </div>
-                            <div class="col-md-10">
-                                <div class="card-body">
-                                    <h5 class="card-title">QuickLook</h5>
-                                    <p class="card-text"><small class="text-muted">productivity‬</small></p>
-                                    <p class="card-text">QuickLook 空格快速预览</p>
-                                    <pre></pre>
-                                    <a href="https://www.microsoft.com/store/productId/9NV4BS3L1H4S" data-product-id="9NV4BS3L1H4S"
-                                        class="btn btn-primary">安装</a>
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                        aria-expanded="false" aria-controls="preview-9NV4BS3L1H4S"
-                                        data-target="#preview-9NV4BS3L1H4S">预览</button>
-
-                                    <div id="preview-9NV4BS3L1H4S" class="collapse">
-                                        <div>
-                                                                                        <img src="https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&amp;h=731&amp;q=90&amp;format=jpg">
-                                                                                        <img src="https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&amp;h=731&amp;q=90&amp;format=jpg">
-                                                                                    </div>
-                                    </div>
-                                </div>
+                            <div id="preview-9NV4BS3L1H4S" class="collapse">
+                                <div>
+                                                                        <img src="https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&amp;h=731&amp;q=90&amp;format=jpg">
+                                                                        <img src="https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&amp;h=731&amp;q=90&amp;format=jpg">
+                                                                    </div>
                             </div>
                         </div>
                     </div>
-                                                        <h3 id="category-tools">tools</h3>
+                </div>
+                                                <h3 class="category" id="category-tools">tools</h3>
+                                <div class="item-container shadow">
+                    <div class="item-img">
+                        <img class="card-img rounded"  src="https://store-images.s-microsoft.com/image/apps.44138.13649428968955623.2ac223c7-2391-4054-b8c5-cb5f317d5362.6ef51b9c-32fc-4f40-a5cc-7eee764d73d3?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
+                    </div>
+                    <div class="">
+                        <div class="card-body">
+                            <h5 class="card-title">Files UWP</h5>
+                            <p class="card-text"><small class="text-muted">tools</small></p>
+                            <p class="card-text">Meet Files, an enthusiast take on what Windows File Explorer explorer should be.</p>
+                            <pre></pre>
+                            <a href="https://www.microsoft.com/store/apps/9NGHP3DX8HDX" data-product-id="9NGHP3DX8HDX" class="btn btn-primary">安装</a>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" aria-expanded="false"
+                                aria-controls="preview-9NGHP3DX8HDX"
+                                data-target="#preview-9NGHP3DX8HDX">预览</button>
 
-                                        <div class="card shadow-sm mb-2 ">
-                        <div class="row no-gutters">
-                            <div class="col-md-2" style="max-width:150px;display: flex;align-items: center;">
-                                <img class="card-img rounded" style="height:auto;width:90%;" src="https://store-images.s-microsoft.com/image/apps.44138.13649428968955623.2ac223c7-2391-4054-b8c5-cb5f317d5362.6ef51b9c-32fc-4f40-a5cc-7eee764d73d3?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
-                            </div>
-                            <div class="col-md-10">
-                                <div class="card-body">
-                                    <h5 class="card-title">Files UWP</h5>
-                                    <p class="card-text"><small class="text-muted">tools</small></p>
-                                    <p class="card-text">Meet Files, an enthusiast take on what Windows File Explorer explorer should be.</p>
-                                    <pre></pre>
-                                    <a href="https://www.microsoft.com/store/apps/9NGHP3DX8HDX" data-product-id="9NGHP3DX8HDX"
-                                        class="btn btn-primary">安装</a>
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                        aria-expanded="false" aria-controls="preview-9NGHP3DX8HDX"
-                                        data-target="#preview-9NGHP3DX8HDX">预览</button>
-
-                                    <div id="preview-9NGHP3DX8HDX" class="collapse">
-                                        <div>
-                                                                                    </div>
-                                    </div>
-                                </div>
+                            <div id="preview-9NGHP3DX8HDX" class="collapse">
+                                <div>
+                                                                    </div>
                             </div>
                         </div>
                     </div>
-                                    
+                </div>
+                                
             </div>
         </div>
 </body>
