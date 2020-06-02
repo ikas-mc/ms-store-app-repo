@@ -12,7 +12,6 @@
 
     <style>
         .sidebar {
-            position: -webkit-sticky;
             position: sticky;
             top: 0px;
             height: calc(100vh - 0rem);
@@ -21,57 +20,93 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-column-gap: 10px;
+        }
+
+        .item-container {
+            display: grid;
+            grid-template-columns: 150px auto;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+
+        }
+
+        
+        .item-img {
+            justify-self:center;
+            align-self: center;
+            width: 130px;;
+        }
+
+        .item-img img {
+            height: auto;
+            width: 100%;;
+        }
+
+
+        .category {
+            z-index: 99999;
+            position: sticky;
+            top: 0px;
+            background: white;
+        }
+
+        .shadow {
+            box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-md">
-        <div class="row">
-            <div class="col-md-2 sidebar">
+        <div class="main-container">
+            <div class="sidebar">
                 <header>APPS</header>
                 <ul class="nav flex-column">
                     {% for group in apps %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="#category-{{group.key}}">{{group.key}}</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#category-{{group.key}}">{{group.key}}</a>
+                    </li>
                     {% endfor %}
                 </ul>
                 <footer>2020</footer>
             </div>
-            <div class="col-md-10">
+            <div class="">
                 {% for group in apps %}
-                    <h3 id="category-{{group.key}}">{{group.key}}</h3>
+                <h3 class="category" id="category-{{group.key}}">{{group.key}}</h3>
+                {% for app in group.value %}
+                <div class="item-container shadow">
+                    <div class="item-img">
+                        <img class="card-img rounded"  src="{{app.productImage}}">
+                    </div>
+                    <div class="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ app.name }}</h5>
+                            <p class="card-text"><small class="text-muted">{{ app.category }}</small></p>
+                            <p class="card-text">{{ app.desc }}</p>
+                            <pre>{{ app.winget }}</pre>
+                            <a href="{{ app.url }}" data-product-id="{{ app.productId }}" class="btn btn-primary">安装</a>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" aria-expanded="false"
+                                aria-controls="preview-{{app.productId}}"
+                                data-target="#preview-{{app.productId}}">预览</button>
 
-                    {% for app in group.value %}
-                    <div class="card shadow-sm mb-2 ">
-                        <div class="row no-gutters">
-                            <div class="col-md-2" style="max-width:150px;display: flex;align-items: center;">
-                                <img class="card-img rounded" style="height:auto;width:90%;" src="{{app.productImage}}">
-                            </div>
-                            <div class="col-md-10">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ app.name }}</h5>
-                                    <p class="card-text"><small class="text-muted">{{ app.category }}</small></p>
-                                    <p class="card-text">{{ app.desc }}</p>
-                                    <pre>{{ app.winget }}</pre>
-                                    <a href="{{ app.url }}" data-product-id="{{ app.productId }}"
-                                        class="btn btn-primary">安装</a>
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                        aria-expanded="false" aria-controls="preview-{{app.productId}}"
-                                        data-target="#preview-{{app.productId}}">预览</button>
-
-                                    <div id="preview-{{app.productId}}" class="collapse">
-                                        <div>
-                                            {% for img in app.previewImages %}
-                                            <img src="{{ img }}">
-                                            {% endfor %}
-                                        </div>
-                                    </div>
+                            <div id="preview-{{app.productId}}" class="collapse">
+                                <div>
+                                    {% for img in app.previewImages %}
+                                    <img src="{{ img }}">
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
+                </div>
+                {% endfor %}
                 {% endfor %}
 
             </div>

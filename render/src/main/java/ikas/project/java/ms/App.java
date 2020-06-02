@@ -3,6 +3,10 @@ package ikas.project.java.ms;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mitchellbosecke.pebble.PebbleEngine;
 import com.mitchellbosecke.pebble.loader.FileLoader;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,6 +16,7 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -22,11 +27,43 @@ public class App {
 
     public final static Logger L = LogManager.getLogger(App.class);
 
+    private static String VERSION = "0.1";
+
     public static void main(String[] args) throws IOException {
-        L.info("start");
+        var workFolder = "..";
+
+        var options = new Options();
+        options.addOption("v", "version", false, "version");
+        options.addOption("h", "help", false, "help");
+        options.addOption("f", "folder", true, "work folder");
+
+        var parser = new DefaultParser();
+        try {
+            var line = parser.parse(options, args);
+
+            if (line.hasOption("v")) {
+                L.info(VERSION);
+                return;
+            }
+
+            if (line.hasOption("h")) {
+                var formatter = new HelpFormatter();
+                formatter.printHelp("App", options);
+                return;
+            }
+
+            if (line.hasOption("f")) {
+                workFolder = line.getOptionValue("f");
+            }
+
+        } catch (ParseException e) {
+            L.error("参数错误", e);
+            return;
+        }
 
         //
-        var projectPath = Paths.get("..");
+        Objects.requireNonNull(workFolder);
+        var projectPath = Paths.get(workFolder);
         L.debug(() -> projectPath.toAbsolutePath().toString());
 
         var repoFolder = projectPath.resolve("repo");
@@ -43,7 +80,7 @@ public class App {
                 L.error(f.toAbsolutePath().toString(), e);
             }
             return null;
-        }).filter(o -> null != o).collect(Collectors.groupingBy(f->f.getOrDefault("category","other")));
+        }).filter(o -> null != o).collect(Collectors.groupingBy(f -> f.getOrDefault("category", "other")));
 
         L.debug(apps);
 
