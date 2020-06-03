@@ -6,6 +6,7 @@
 "category": "tools",
 "url": "https://www.microsoft.com/store/apps/9NGHP3DX8HDX",
 "productId": "9NGHP3DX8HDX",
+"winget":"winget install ",
 "productImage": "https://store-images.s-microsoft.com/image/apps.44138.13649428968955623.2ac223c7-2391-4054-b8c5-cb5f317d5362.6ef51b9c-32fc-4f40-a5cc-7eee764d73d3?mode=scale&q=90&h=270&w=270&background=%230078D7",
 "previewImages": []
 }

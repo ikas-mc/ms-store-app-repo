@@ -1,9 +1,10 @@
 {
 "name": "TreeSize Free",
 "desc": "TreeSize Free tells you where precious disk space has gone",
-"category": "tools‬",
+"category": "tools",
 "url": "https://www.microsoft.com/store/productId/9NBLGGH40881",
 "productId": "9NBLGGH40881",
+"winget":"winget install ",
 "productImage": "https://store-images.s-microsoft.com/image/apps.24649.13510798887974550.6cd05e21-7b01-4369-8d30-5fc6b61e8c9c.a820aa3e-fe3a-41ac-a0a5-899d57c3c8af?mode=scale&q=90&h=270&w=270&background=%230078D7",
 "previewImages": []
 }

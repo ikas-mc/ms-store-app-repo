@@ -77,7 +77,7 @@ public class App {
             try (var reader = Files.newBufferedReader(f, StandardCharsets.UTF_8)) {
                 return objectMapper.readValue(reader, HashMap.class);
             } catch (IOException e) {
-                L.error(f.toAbsolutePath().toString(), e);
+                L.error("文件结构错误:" + f.toAbsolutePath().toString(), e);
             }
             return null;
         }).filter(o -> null != o).collect(Collectors.groupingBy(f -> f.getOrDefault("category", "other")));
