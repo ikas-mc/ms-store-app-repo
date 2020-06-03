@@ -23,7 +23,8 @@ jobs:
       run: |
           git config --global user.name "Actions"
           git config --global user.email "Actions"
-          git commit -a -m "update by Github Actions " 
+          git add *
+          git commit  -m "update by Github Actions " 
           git remote set-url --push origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/ikas-mc/ms-store-app-repo
           git push origin master
       
