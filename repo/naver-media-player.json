@@ -1,0 +1,10 @@
+{
+"name": "NAVER Media Player",
+"desc": "播放器",
+"category": "entertainment",
+"url": "https://www.microsoft.com/store/productId/9NBLGGH3ZHR5",
+"productId": "9NBLGGH3ZHR5",
+"winget":"winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.28781.13510798887944636.f5193327-89e8-482e-a01a-b24b67a027e3.2660b8c9-3418-43a2-ba30-3c42efe8a9a7?mode=scale&q=90&h=270&w=270&background=%230a74cf",
+"previewImages": []
+}

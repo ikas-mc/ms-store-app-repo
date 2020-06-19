@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug">
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%highlight{%-5level}] %d{yyyy-MM-dd HH:mm:ss.SSS}  [%t] %highlight{%c{1.}.%M(%L)}: %msg%n"/>
+        </Console>
+
+        <Async name="ASYNC" includeLocation="true">
+            <AppenderRef ref="CONSOLE"/>
+        </Async>
+    </Appenders>
+
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="ASYNC"/>
+        </Root>
+    </Loggers>
+</Configuration>

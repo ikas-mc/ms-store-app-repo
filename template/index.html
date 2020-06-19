@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>windows 10 store app</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        .sidebar {
+            position: sticky;
+            top: 0px;
+            height: calc(100vh - 0rem);
+            border-right: 1px solid rgba(0, 0, 0, .1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-column-gap: 10px;
+        }
+
+        .item-container {
+            display: grid;
+            grid-template-columns: 150px auto;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+            margin-bottom: 10px;
+        }
+
+        .item-body {
+            padding: 0.5rem;
+            display: grid;
+            align-items: center;
+            align-content: center;
+        }
+
+        .item-title {}
+
+        .item-text {}
+
+
+        .item-img {
+            justify-self: center;
+            align-self: center;
+            width: 130px;
+        }
+
+        .item-img img {
+            height: auto;
+            width: 100%;
+            ;
+        }
+
+
+        .category {
+            z-index: 99999;
+            position: sticky;
+            top: 0px;
+            background: white;
+            padding: 5px 5px 0;
+        }
+
+        .shadow {
+            box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .text-muted {
+            color: #6c757d !important;
+        }
+
+        .code {
+            background: #dddddd;
+            padding: 5px 5px 0;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="container-md">
+    <div class="main-container">
+        <div class="sidebar">
+            <header>APPS</header>
+            <ul class="nav flex-column">
+                {% for group in apps %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#category-{{group.key}}">{{group.key}}</a>
+                </li>
+                {% endfor %}
+
+            </ul>
+            <footer>2020</footer>
+        </div>
+        <div class="">
+            {% for group in apps %}
+
+            <div class="category">
+                <h3>{{group.key}}</h3>
+            </div>
+            <a id="category-{{group.key}}"></a>
+            {% for app in group.value %}
+
+            <div class="item-container shadow">
+                <div class="item-img">
+                    <img class="card-img rounded" src="{{app.productImage}}">
+                </div>
+                <div class="item-body">
+                    <h4 class="item-title">{{ app.name }}</h4>
+                    <p class="item-text"><small class="text-muted">{{ app.category }}</small></p>
+                    <p class="item-text">{{ app.desc }}</p>
+                    <a href="{{ app.url }}" target="_blank" data-product-id="{{ app.productId }}" class="">安装</a>
+                    <pre class="code hide">{{ app.winget }}</pre>
+                    <button class=" hide" type="button" data-target="#preview-{{app.productId}}">预览</button>
+                    <div id="preview-{{app.productId}}" class="collapse">
+                        {% for img in app.previewImages %}
+
+                        <img src="{{ img }}">
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+
+        </div>
+    </div>
+</body>
+
+</html>

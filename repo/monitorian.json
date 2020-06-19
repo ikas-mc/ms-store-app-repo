@@ -1,0 +1,10 @@
+{
+"name": "Monitorian",
+"desc": "调整外接屏幕亮度",
+"category": "tools",
+"url": "https://www.microsoft.com/store/productId/9NW33J738BL0",
+"productId": "9NW33J738BL0",
+"winget":"winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.41311.14453285281266867.bc1c2d7a-e9ae-4077-bd7d-c1df1212f849.245215ab-827c-48ab-9ae4-f50bab979596?mode=scale&q=90&h=270&w=270&background=%23262626",
+"previewImages": []
+}

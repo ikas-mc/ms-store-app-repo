@@ -1,0 +1,10 @@
+{
+"name": "PowerPlanSwitcher",
+"desc": "windows10风格 电源计划管理工具",
+"category": "tools",
+"url": "https://www.microsoft.com/store/productId/9nblggh556l3",
+"productId": "9nblggh556l3",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.10470.13510798887869464.5fe3ef94-5714-4bdd-9ce9-0334809fe68d.3625d868-a6d8-4f14-a06d-c1c795796cca?mode=scale&q=90&h=270&w=270&background=%230078D7",
+"previewImages": []
+}

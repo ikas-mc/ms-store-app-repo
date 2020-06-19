@@ -1,0 +1,13 @@
+{
+"name": "QuickLook",
+"desc": "QuickLook 空格快速预览",
+"category": "productivity",
+"url": "https://www.microsoft.com/store/productId/9NV4BS3L1H4S",
+"productId": "9NV4BS3L1H4S",
+"winget":"winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.55095.14405803611253731.a92873b0-37c2-4797-8970-49361565e95d.bd12e7f3-de6c-44b1-af99-567b9904c033?mode=scale&q=90&h=270&w=270&background=%230078D7",
+"previewImages": [
+    "https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&h=731&q=90&format=jpg",
+    "https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&h=731&q=90&format=jpg"
+    ]
+}

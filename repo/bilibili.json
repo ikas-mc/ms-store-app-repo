@@ -1,0 +1,10 @@
+{
+"name": "哔哩哔哩动画",
+"desc": "官方客户端",
+"category": "entertainment",
+"url": "https://www.microsoft.com/store/productId/9NBLGGH5Q5FV",
+"productId": "9NBLGGH5Q5FV",
+"winget":"winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&q=90&h=300&w=200",
+"previewImages": ["https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&q=90&h=300&w=200"]
+}
