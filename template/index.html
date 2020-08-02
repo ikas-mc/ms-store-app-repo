@@ -4,10 +4,52 @@
 <head>
     <meta charset="utf-8">
     <title>windows 10 store app</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
 
     <style>
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", "Segoe UI", "SegoeUI", "Helvetica Neue", "Noto Sans", "sans-serif";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+            margin-bottom: .5rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .nav {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+        .nav-link {
+            display: block;
+            padding: .5rem 1rem;
+        }
+
+
         .sidebar {
             position: sticky;
             top: 0px;
@@ -24,6 +66,12 @@
             grid-column-gap: 10px;
         }
 
+        .items-container {
+            display: grid;
+            grid-column-gap: 10px;
+            grid-template-columns: repeat(auto-fill, 350px);
+        }
+
         .item-container {
             display: grid;
             grid-template-columns: 150px auto;
@@ -35,13 +83,16 @@
         }
 
         .item-body {
-            padding: 0.5rem;
+            padding: 8px;
             display: grid;
             align-items: center;
-            align-content: center;
+            grid-template-rows: 30px 25px auto 25px
         }
 
-        .item-title {}
+        .item-title {
+            font-weight: 500;
+            overflow-wrap: anywhere;
+        }
 
         .item-text {}
 
@@ -83,61 +134,63 @@
             background: #dddddd;
             padding: 5px 5px 0;
         }
-
-
     </style>
 </head>
 
 <body>
-<div class="container-md">
-    <div class="main-container">
-        <div class="sidebar">
-            <header>APPS</header>
-            <ul class="nav flex-column">
+    <div class="">
+        <div class="main-container">
+            <div class="sidebar">
+                <header>Windows Apps</header>
+                <ul class="nav flex-column">
+                    {% for group in apps %}
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#category-{{group.key}}">{{group.key}}</a>
+                    </li>
+                    {% endfor %}
+
+                </ul>
+                <footer>
+                    <a href="https://github.com/ikas-mc/ms-store-app-repo">Add</a>
+                </footer>
+            </div>
+            <div class="">
                 {% for group in apps %}
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#category-{{group.key}}">{{group.key}}</a>
-                </li>
-                {% endfor %}
-
-            </ul>
-            <footer>2020</footer>
-        </div>
-        <div class="">
-            {% for group in apps %}
-
-            <div class="category">
-                <h3>{{group.key}}</h3>
-            </div>
-            <a id="category-{{group.key}}"></a>
-            {% for app in group.value %}
-
-            <div class="item-container shadow">
-                <div class="item-img">
-                    <img class="card-img rounded" src="{{app.productImage}}">
+                <a id="category-{{group.key}}">
+                    <!--TODO-->
+                </a>
+                <div class="category">
+                    <h3>{{group.key}}</h3>
                 </div>
-                <div class="item-body">
-                    <h4 class="item-title">{{ app.name }}</h4>
-                    <p class="item-text"><small class="text-muted">{{ app.category }}</small></p>
-                    <p class="item-text">{{ app.desc }}</p>
-                    <a href="{{ app.url }}" target="_blank" data-product-id="{{ app.productId }}" class="">安装</a>
-                    <pre class="code hide">{{ app.winget }}</pre>
-                    <button class=" hide" type="button" data-target="#preview-{{app.productId}}">预览</button>
-                    <div id="preview-{{app.productId}}" class="collapse">
-                        {% for img in app.previewImages %}
+                <div class="items-container">
+                    {% for app in group.value %}
+                    <div class="item-container shadow">
+                        <div class="item-img">
+                            <img class="card-img rounded" src="{{app.productImage}}">
+                        </div>
+                        <div class="item-body">
+                            <h4 class="item-title">{{ app.name }}</h4>
+                            <p class="item-text"><small class="text-muted">{{ app.category }}</small></p>
+                            <p class="item-text">{{ app.desc }}</p>
+                            <a href="{{ app.url }}" target="_blank" data-product-id="{{ app.productId }}"
+                                class="">安装</a>
+                            <pre class="code hide">{{ app.winget }}</pre>
+                            <button class=" hide" type="button" data-target="#preview-{{app.productId}}">预览</button>
+                            <div id="preview-{{app.productId}}" class="hide">
+                                {% for img in app.previewImages %}
 
-                        <img src="{{ img }}">
-                        {% endfor %}
+                                <img src="{{ img }}">
+                                {% endfor %}
 
+                            </div>
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-            {% endfor %}
-
         </div>
-    </div>
 </body>
 
 </html>
