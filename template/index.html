@@ -134,6 +134,10 @@
             background: #dddddd;
             padding: 5px 5px 0;
         }
+
+        .btn {
+            max-width: 100px;
+        }
     </style>
 </head>
 
@@ -173,17 +177,20 @@
                             <h4 class="item-title">{{ app.name }}</h4>
                             <p class="item-text"><small class="text-muted">{{ app.category }}</small></p>
                             <p class="item-text">{{ app.desc }}</p>
-                            <a href="{{ app.url }}" target="_blank" data-product-id="{{ app.productId }}"
-                                class="">安装</a>
-                            <pre class="code hide">{{ app.winget }}</pre>
+                            <!--<pre class="code hide">{{ app.winget }}</pre>-->
+                            <div>
+                                <a class="btn" href="{{ app.url }}" target="_blank"
+                                    data-product-id="{{ app.productId }}" class="">查看</a>
+                                <a class="btn" href="ms-windows-store://pdp/?ProductId={{app.productId}}">安装</a>
+                            </div>
                             <button class=" hide" type="button" data-target="#preview-{{app.productId}}">预览</button>
+                            <!--
                             <div id="preview-{{app.productId}}" class="hide">
                                 {% for img in app.previewImages %}
-
                                 <img src="{{ img }}">
                                 {% endfor %}
-
                             </div>
+                            -->
                         </div>
                     </div>
                     {% endfor %}
