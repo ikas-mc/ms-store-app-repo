@@ -1,0 +1,12 @@
+{
+"name": "Clean Reader",
+"author": "云之幻",
+"price": "0",
+"desc": "epub,txt阅读",
+"category": "entertainment",
+"url": "https://www.microsoft.com/store/productId/9mv65l2xfcsk",
+"productId": "9mv65l2xfcsk",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.32558.13798930623676226.bf998f70-e36a-4b3b-87ba-86b8a4573ca5.3c1daf32-e186-42cd-893e-6244cea48867?mode=scale&q=90&h=270&w=270&background=%230078D7",
+"previewImages": []
+}

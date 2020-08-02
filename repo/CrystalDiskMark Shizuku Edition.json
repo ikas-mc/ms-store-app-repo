@@ -1,0 +1,12 @@
+{
+"name": "CrystalDiskMark Shizuku Edition",
+"author": "‪Crystal Dew World‬",
+"price": "0",
+"desc": "硬盘跑分",
+"category": "tools",
+"url": "https://www.microsoft.com/store/productId/9nblggh536cc",
+"productId": "9nblggh536cc",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.65195.13510798887674018.51263ad4-5a61-462b-b3cb-564671f30821.4ba6438f-c8ae-48b1-b6b2-30bab2d77a9a?mode=scale&q=90&h=270&w=270&background=%234EC6EE",
+"previewImages": []
+}

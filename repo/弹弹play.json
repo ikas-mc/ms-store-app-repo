@@ -1,0 +1,12 @@
+{
+"name": "弹弹play",
+"author": "‪Kaedei‬",
+"price": "0",
+"desc": "本地弹幕播放器",
+"category": "entertainment",
+"url": "https://www.microsoft.com/store/productId/9nwpvd7t1hpw",
+"productId": "9nwpvd7t1hpw",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.3865.14440974295098642.982325ba-308a-42ac-886c-0cc26b89a743.de137e6d-f7a8-4e0d-9937-3726d9227944?mode=scale&q=90&h=300&w=300",
+"previewImages": []
+}

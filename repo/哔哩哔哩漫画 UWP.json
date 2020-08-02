@@ -1,0 +1,12 @@
+{
+"name": "哔哩哔哩漫画 UWP",
+"author": "‪LancerComet‬",
+"price": "0",
+"desc": "哔哩哔哩漫画官方客户端",
+"category": "entertainment",
+"url": "https://www.microsoft.com/store/productId/9nn9l42j9fs3",
+"productId": "9nn9l42j9fs3",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.24581.13746474213129752.6daa5ee0-ca6b-4fa4-9481-b958ff016f60.db8351b6-6bb8-4940-bb8b-b8e7c622828c?mode=scale&q=90&h=300&w=200",
+"previewImages": []
+}

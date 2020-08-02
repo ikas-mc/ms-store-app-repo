@@ -1,0 +1,12 @@
+{
+"name": "Drawboard PDF",
+"author": "‪Drawboard‬",
+"price": "0",
+"desc": "pdf阅读器",
+"category": "productivity",
+"url": "https://www.microsoft.com/store/productId/9wzdncrfhwqt",
+"productId": "9wzdncrfhwqt",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.43641.9007199266247478.c4322fe3-8dc8-4f5b-a333-d2a16c2b4752.748e1845-835e-4305-a495-309485b5b7e1?mode=scale&q=90&h=300&w=200",
+"previewImages": []
+}

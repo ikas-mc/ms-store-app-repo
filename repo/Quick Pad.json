@@ -1,0 +1,12 @@
+{
+"name": "Quick Pad - Fluent Notepad App",
+"author": "‪Yair A‬",
+"price": "0",
+"desc": "Quick Pad makes note taking easy",
+"category": "productivity",
+"url": "https://www.microsoft.com/store/productId/9pdlwqhtlsv3",
+"productId": "9pdlwqhtlsv3",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.17271.14151964118482152.c3ffaffd-ac6b-4489-8e44-e971c0781c34.296d8ac4-96b1-4b6e-aebe-f5d1cbc7d0c1?mode=scale&q=90&h=270&w=270&background=%230078D7",
+"previewImages": []
+}

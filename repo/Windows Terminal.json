@@ -1,0 +1,12 @@
+{
+"name": "Windows Terminal",
+"author": "‪Microsoft Corporation‬",
+"price": "0",
+"desc": "windows 新终端",
+"category": "dev",
+"url": "https://www.microsoft.com/store/productId/9n0dx20hk701",
+"productId": "9n0dx20hk701",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.22832.13926773940052066.96ea379b-9e7a-49f1-8cee-25ed75770e30.dcdc888f-85a5-4182-8126-245f0757ef3a?mode=scale&q=90&h=300&w=200",
+"previewImages": []
+}

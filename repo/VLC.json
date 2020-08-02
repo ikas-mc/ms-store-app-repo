@@ -1,0 +1,12 @@
+{
+"name": "VLC",
+"author": "‪VideoLAN‬",
+"price": "0",
+"desc": "强大的音视频播放器",
+"category": "entertainment",
+"url": "https://www.microsoft.com/store/productId/9nblggh4vvnh",
+"productId": "9nblggh4vvnh",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.35168.13510798887505848.241f4234-3f23-44c1-a9ec-9117ae8db6e0.b33bfc91-d53f-4482-933d-d375601514ba?mode=scale&q=90&h=270&w=270&background=%230078D7",
+"previewImages": []
+}

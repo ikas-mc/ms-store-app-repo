@@ -1,0 +1,12 @@
+{
+"name": "Snipaste",
+"author": "‪Le Liu‬",
+"price": "0",
+"desc": "截图与贴图工具",
+"category": "productivity",
+"url": "https://www.microsoft.com/store/productId/9p1wxpkb68kx",
+"productId": "9p1wxpkb68kx",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.25543.14503356220976813.6529113a-95e4-4700-808f-6c91cac3e590.fa86b8ea-8644-48ca-9ae9-b35b06e3a5af?mode=scale&q=90&h=300&w=300",
+"previewImages": []
+}

@@ -1,0 +1,12 @@
+{
+"name": "TranslucentTB",
+"author": "‪Charles Milette‬",
+"price": "0",
+"desc": "任务栏控制工具",
+"category": "tools",
+"url": "https://www.microsoft.com/store/productId/9pf4kz2vn4w9",
+"productId": "9pf4kz2vn4w9",
+"winget": "winget install ",
+"productImage": "https://store-images.s-microsoft.com/image/apps.9936.14207443949651364.03e36c27-3556-484f-80a6-1428ce0f0e2f.69a6c140-f724-4e9f-831b-5950ba7be323?mode=scale&q=90&h=270&w=270&background=%230078D7",
+"previewImages": []
+}
