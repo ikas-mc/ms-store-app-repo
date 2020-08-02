@@ -1,0 +1,26 @@
+{
+"name": "ms-store-app-repo helper",
+"version": "0.0.0.2",
+"manifest_version": 2,
+"description": "ms-store-app-repo helper.",
+"icons": {
+    "16": "icons/icon48x48.png",
+    "32": "icons/icon48x48.png",
+    "48": "icons/icon48x48.png",
+    "128": "icons/icon128x128.png"
+},
+"browser_action": {
+    "default_popup": "popup/popup.html"
+},
+"content_scripts": [
+    {
+        "matches": [
+            "https://www.microsoft.com/*"
+        ],
+        "js": ["lib/jquery.min.js", "content-scripts/content.js"]
+    }
+],
+"web_accessible_resources": [
+    "images/*.jpeg"
+]
+}
