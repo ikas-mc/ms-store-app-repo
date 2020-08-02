@@ -4,10 +4,52 @@
 <head>
     <meta charset="utf-8">
     <title>windows 10 store app</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
 
     <style>
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", "Segoe UI", "SegoeUI", "Helvetica Neue", "Noto Sans", "sans-serif";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+            margin-bottom: .5rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .nav {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+        .nav-link {
+            display: block;
+            padding: .5rem 1rem;
+        }
+
+
         .sidebar {
             position: sticky;
             top: 0px;
@@ -24,6 +66,12 @@
             grid-column-gap: 10px;
         }
 
+        .items-container {
+            display: grid;
+            grid-column-gap: 10px;
+            grid-template-columns: repeat(auto-fill, 350px);
+        }
+
         .item-container {
             display: grid;
             grid-template-columns: 150px auto;
@@ -35,13 +83,16 @@
         }
 
         .item-body {
-            padding: 0.5rem;
+            padding: 8px;
             display: grid;
             align-items: center;
-            align-content: center;
+            grid-template-rows: 30px 25px auto 25px
         }
 
-        .item-title {}
+        .item-title {
+            font-weight: 500;
+            overflow-wrap: anywhere;
+        }
 
         .item-text {}
 
@@ -83,203 +134,214 @@
             background: #dddddd;
             padding: 5px 5px 0;
         }
-
-
     </style>
 </head>
 
 <body>
-<div class="container-md">
-    <div class="main-container">
-        <div class="sidebar">
-            <header>APPS</header>
-            <ul class="nav flex-column">
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="#category-dev">dev</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="#category-productivity">productivity</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="#category-entertainment">entertainment</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="#category-tools">tools</a>
-                </li>
-                
-            </ul>
-            <footer>2020</footer>
+    <div class="">
+        <div class="main-container">
+            <div class="sidebar">
+                <header>Windows Apps</header>
+                <ul class="nav flex-column">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#category-productivity">productivity</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#category-dev">dev</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#category-entertainment">entertainment</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#category-tools">tools</a>
+                    </li>
+                    
+                </ul>
+                <footer>
+                    <a href="https://github.com/ikas-mc/ms-store-app-repo">Add</a>
+                </footer>
+            </div>
+            <div class="">
+                                <a id="category-productivity">
+                    <!--TODO-->
+                </a>
+                <div class="category">
+                    <h3>productivity</h3>
+                </div>
+                <div class="items-container">
+                                        <div class="item-container shadow">
+                        <div class="item-img">
+                            <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.55095.14405803611253731.a92873b0-37c2-4797-8970-49361565e95d.bd12e7f3-de6c-44b1-af99-567b9904c033?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
+                        </div>
+                        <div class="item-body">
+                            <h4 class="item-title">QuickLook</h4>
+                            <p class="item-text"><small class="text-muted">productivity</small></p>
+                            <p class="item-text">QuickLook 空格快速预览</p>
+                            <a href="https://www.microsoft.com/store/productId/9NV4BS3L1H4S" target="_blank" data-product-id="9NV4BS3L1H4S"
+                                class="">安装</a>
+                            <pre class="code hide">winget install </pre>
+                            <button class=" hide" type="button" data-target="#preview-9NV4BS3L1H4S">预览</button>
+                            <div id="preview-9NV4BS3L1H4S" class="hide">
+                                
+                                <img src="https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&amp;h=731&amp;q=90&amp;format=jpg">
+                                
+                                <img src="https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&amp;h=731&amp;q=90&amp;format=jpg">
+                                
+                            </div>
+                        </div>
+                    </div>
+                                    </div>
+                                <a id="category-dev">
+                    <!--TODO-->
+                </a>
+                <div class="category">
+                    <h3>dev</h3>
+                </div>
+                <div class="items-container">
+                                        <div class="item-container shadow">
+                        <div class="item-img">
+                            <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.43022.14342653579960902.940fae20-fb9a-47f6-b71d-9bbb99a5e739.d9a5a219-36c3-4fe6-adc0-90ca5ea32dff?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%23dedede">
+                        </div>
+                        <div class="item-body">
+                            <h4 class="item-title">DBeaver CE</h4>
+                            <p class="item-text"><small class="text-muted">dev</small></p>
+                            <p class="item-text">DBeaver is a universal database management tool for everyone who needs to work with data in a professional way.</p>
+                            <a href="https://www.microsoft.com/store/productId/9pnkdr50694p" target="_blank" data-product-id="9pnkdr50694p"
+                                class="">安装</a>
+                            <pre class="code hide">winget install </pre>
+                            <button class=" hide" type="button" data-target="#preview-9pnkdr50694p">预览</button>
+                            <div id="preview-9pnkdr50694p" class="hide">
+                                
+                            </div>
+                        </div>
+                    </div>
+                                    </div>
+                                <a id="category-entertainment">
+                    <!--TODO-->
+                </a>
+                <div class="category">
+                    <h3>entertainment</h3>
+                </div>
+                <div class="items-container">
+                                        <div class="item-container shadow">
+                        <div class="item-img">
+                            <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.28781.13510798887944636.f5193327-89e8-482e-a01a-b24b67a027e3.2660b8c9-3418-43a2-ba30-3c42efe8a9a7?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230a74cf">
+                        </div>
+                        <div class="item-body">
+                            <h4 class="item-title">NAVER Media Player</h4>
+                            <p class="item-text"><small class="text-muted">entertainment</small></p>
+                            <p class="item-text">播放器</p>
+                            <a href="https://www.microsoft.com/store/productId/9NBLGGH3ZHR5" target="_blank" data-product-id="9NBLGGH3ZHR5"
+                                class="">安装</a>
+                            <pre class="code hide">winget install </pre>
+                            <button class=" hide" type="button" data-target="#preview-9NBLGGH3ZHR5">预览</button>
+                            <div id="preview-9NBLGGH3ZHR5" class="hide">
+                                
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="item-container shadow">
+                        <div class="item-img">
+                            <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&amp;q=90&amp;h=300&amp;w=200">
+                        </div>
+                        <div class="item-body">
+                            <h4 class="item-title">哔哩哔哩动画</h4>
+                            <p class="item-text"><small class="text-muted">entertainment</small></p>
+                            <p class="item-text">官方客户端</p>
+                            <a href="https://www.microsoft.com/store/productId/9NBLGGH5Q5FV" target="_blank" data-product-id="9NBLGGH5Q5FV"
+                                class="">安装</a>
+                            <pre class="code hide">winget install </pre>
+                            <button class=" hide" type="button" data-target="#preview-9NBLGGH5Q5FV">预览</button>
+                            <div id="preview-9NBLGGH5Q5FV" class="hide">
+                                
+                                <img src="https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&amp;q=90&amp;h=300&amp;w=200">
+                                
+                            </div>
+                        </div>
+                    </div>
+                                    </div>
+                                <a id="category-tools">
+                    <!--TODO-->
+                </a>
+                <div class="category">
+                    <h3>tools</h3>
+                </div>
+                <div class="items-container">
+                                        <div class="item-container shadow">
+                        <div class="item-img">
+                            <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.41311.14453285281266867.bc1c2d7a-e9ae-4077-bd7d-c1df1212f849.245215ab-827c-48ab-9ae4-f50bab979596?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%23262626">
+                        </div>
+                        <div class="item-body">
+                            <h4 class="item-title">Monitorian</h4>
+                            <p class="item-text"><small class="text-muted">tools</small></p>
+                            <p class="item-text">调整外接屏幕亮度</p>
+                            <a href="https://www.microsoft.com/store/productId/9NW33J738BL0" target="_blank" data-product-id="9NW33J738BL0"
+                                class="">安装</a>
+                            <pre class="code hide">winget install </pre>
+                            <button class=" hide" type="button" data-target="#preview-9NW33J738BL0">预览</button>
+                            <div id="preview-9NW33J738BL0" class="hide">
+                                
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="item-container shadow">
+                        <div class="item-img">
+                            <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.10470.13510798887869464.5fe3ef94-5714-4bdd-9ce9-0334809fe68d.3625d868-a6d8-4f14-a06d-c1c795796cca?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
+                        </div>
+                        <div class="item-body">
+                            <h4 class="item-title">PowerPlanSwitcher</h4>
+                            <p class="item-text"><small class="text-muted">tools</small></p>
+                            <p class="item-text">windows10风格 电源计划管理工具</p>
+                            <a href="https://www.microsoft.com/store/productId/9nblggh556l3" target="_blank" data-product-id="9nblggh556l3"
+                                class="">安装</a>
+                            <pre class="code hide">winget install </pre>
+                            <button class=" hide" type="button" data-target="#preview-9nblggh556l3">预览</button>
+                            <div id="preview-9nblggh556l3" class="hide">
+                                
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="item-container shadow">
+                        <div class="item-img">
+                            <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.44138.13649428968955623.2ac223c7-2391-4054-b8c5-cb5f317d5362.6ef51b9c-32fc-4f40-a5cc-7eee764d73d3?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
+                        </div>
+                        <div class="item-body">
+                            <h4 class="item-title">Files UWP</h4>
+                            <p class="item-text"><small class="text-muted">tools</small></p>
+                            <p class="item-text">Meet Files, an enthusiast take on what Windows File Explorer explorer should be.</p>
+                            <a href="https://www.microsoft.com/store/apps/9NGHP3DX8HDX" target="_blank" data-product-id="9NGHP3DX8HDX"
+                                class="">安装</a>
+                            <pre class="code hide">winget install </pre>
+                            <button class=" hide" type="button" data-target="#preview-9NGHP3DX8HDX">预览</button>
+                            <div id="preview-9NGHP3DX8HDX" class="hide">
+                                
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="item-container shadow">
+                        <div class="item-img">
+                            <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.24649.13510798887974550.6cd05e21-7b01-4369-8d30-5fc6b61e8c9c.a820aa3e-fe3a-41ac-a0a5-899d57c3c8af?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
+                        </div>
+                        <div class="item-body">
+                            <h4 class="item-title">TreeSize Free</h4>
+                            <p class="item-text"><small class="text-muted">tools</small></p>
+                            <p class="item-text">TreeSize Free tells you where precious disk space has gone</p>
+                            <a href="https://www.microsoft.com/store/productId/9NBLGGH40881" target="_blank" data-product-id="9NBLGGH40881"
+                                class="">安装</a>
+                            <pre class="code hide">winget install </pre>
+                            <button class=" hide" type="button" data-target="#preview-9NBLGGH40881">预览</button>
+                            <div id="preview-9NBLGGH40881" class="hide">
+                                
+                            </div>
+                        </div>
+                    </div>
+                                    </div>
+                            </div>
         </div>
-        <div class="">
-            
-            <div class="category">
-                <h3>dev</h3>
-            </div>
-            <a id="category-dev"></a>
-            
-            <div class="item-container shadow">
-                <div class="item-img">
-                    <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.43022.14342653579960902.940fae20-fb9a-47f6-b71d-9bbb99a5e739.d9a5a219-36c3-4fe6-adc0-90ca5ea32dff?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%23dedede">
-                </div>
-                <div class="item-body">
-                    <h4 class="item-title">DBeaver CE</h4>
-                    <p class="item-text"><small class="text-muted">dev</small></p>
-                    <p class="item-text">DBeaver is a universal database management tool for everyone who needs to work with data in a professional way.</p>
-                    <a href="https://www.microsoft.com/store/productId/9pnkdr50694p" target="_blank" data-product-id="9pnkdr50694p" class="">安装</a>
-                    <pre class="code hide">winget install </pre>
-                    <button class=" hide" type="button" data-target="#preview-9pnkdr50694p">预览</button>
-                    <div id="preview-9pnkdr50694p" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-                        
-            <div class="category">
-                <h3>productivity</h3>
-            </div>
-            <a id="category-productivity"></a>
-            
-            <div class="item-container shadow">
-                <div class="item-img">
-                    <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.55095.14405803611253731.a92873b0-37c2-4797-8970-49361565e95d.bd12e7f3-de6c-44b1-af99-567b9904c033?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
-                </div>
-                <div class="item-body">
-                    <h4 class="item-title">QuickLook</h4>
-                    <p class="item-text"><small class="text-muted">productivity</small></p>
-                    <p class="item-text">QuickLook 空格快速预览</p>
-                    <a href="https://www.microsoft.com/store/productId/9NV4BS3L1H4S" target="_blank" data-product-id="9NV4BS3L1H4S" class="">安装</a>
-                    <pre class="code hide">winget install </pre>
-                    <button class=" hide" type="button" data-target="#preview-9NV4BS3L1H4S">预览</button>
-                    <div id="preview-9NV4BS3L1H4S" class="collapse">
-                        
-                        <img src="https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&amp;h=731&amp;q=90&amp;format=jpg">
-                        
-                        <img src="https://store-images.s-microsoft.com/image/apps.24917.14405803611253731.3006f567-a4f6-43d6-95fb-9033fa42fa41.f44af418-f702-4c8f-9bd8-6481698d8260?w=1399&amp;h=731&amp;q=90&amp;format=jpg">
-                        
-                    </div>
-                </div>
-            </div>
-                        
-            <div class="category">
-                <h3>entertainment</h3>
-            </div>
-            <a id="category-entertainment"></a>
-            
-            <div class="item-container shadow">
-                <div class="item-img">
-                    <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.28781.13510798887944636.f5193327-89e8-482e-a01a-b24b67a027e3.2660b8c9-3418-43a2-ba30-3c42efe8a9a7?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230a74cf">
-                </div>
-                <div class="item-body">
-                    <h4 class="item-title">NAVER Media Player</h4>
-                    <p class="item-text"><small class="text-muted">entertainment</small></p>
-                    <p class="item-text">播放器</p>
-                    <a href="https://www.microsoft.com/store/productId/9NBLGGH3ZHR5" target="_blank" data-product-id="9NBLGGH3ZHR5" class="">安装</a>
-                    <pre class="code hide">winget install </pre>
-                    <button class=" hide" type="button" data-target="#preview-9NBLGGH3ZHR5">预览</button>
-                    <div id="preview-9NBLGGH3ZHR5" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="item-container shadow">
-                <div class="item-img">
-                    <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&amp;q=90&amp;h=300&amp;w=200">
-                </div>
-                <div class="item-body">
-                    <h4 class="item-title">哔哩哔哩动画</h4>
-                    <p class="item-text"><small class="text-muted">entertainment</small></p>
-                    <p class="item-text">官方客户端</p>
-                    <a href="https://www.microsoft.com/store/productId/9NBLGGH5Q5FV" target="_blank" data-product-id="9NBLGGH5Q5FV" class="">安装</a>
-                    <pre class="code hide">winget install </pre>
-                    <button class=" hide" type="button" data-target="#preview-9NBLGGH5Q5FV">预览</button>
-                    <div id="preview-9NBLGGH5Q5FV" class="collapse">
-                        
-                        <img src="https://store-images.s-microsoft.com/image/apps.37735.13510798887146259.d1e29a84-8fd5-43ea-838b-f82679377a6b.2387f063-f93d-48ce-8766-43f2f5c5250a?mode=scale&amp;q=90&amp;h=300&amp;w=200">
-                        
-                    </div>
-                </div>
-            </div>
-                        
-            <div class="category">
-                <h3>tools</h3>
-            </div>
-            <a id="category-tools"></a>
-            
-            <div class="item-container shadow">
-                <div class="item-img">
-                    <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.10470.13510798887869464.5fe3ef94-5714-4bdd-9ce9-0334809fe68d.3625d868-a6d8-4f14-a06d-c1c795796cca?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
-                </div>
-                <div class="item-body">
-                    <h4 class="item-title">PowerPlanSwitcher</h4>
-                    <p class="item-text"><small class="text-muted">tools</small></p>
-                    <p class="item-text">windows10风格 电源计划管理工具</p>
-                    <a href="https://www.microsoft.com/store/productId/9nblggh556l3" target="_blank" data-product-id="9nblggh556l3" class="">安装</a>
-                    <pre class="code hide">winget install </pre>
-                    <button class=" hide" type="button" data-target="#preview-9nblggh556l3">预览</button>
-                    <div id="preview-9nblggh556l3" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="item-container shadow">
-                <div class="item-img">
-                    <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.41311.14453285281266867.bc1c2d7a-e9ae-4077-bd7d-c1df1212f849.245215ab-827c-48ab-9ae4-f50bab979596?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%23262626">
-                </div>
-                <div class="item-body">
-                    <h4 class="item-title">Monitorian</h4>
-                    <p class="item-text"><small class="text-muted">tools</small></p>
-                    <p class="item-text">调整外接屏幕亮度</p>
-                    <a href="https://www.microsoft.com/store/productId/9NW33J738BL0" target="_blank" data-product-id="9NW33J738BL0" class="">安装</a>
-                    <pre class="code hide">winget install </pre>
-                    <button class=" hide" type="button" data-target="#preview-9NW33J738BL0">预览</button>
-                    <div id="preview-9NW33J738BL0" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="item-container shadow">
-                <div class="item-img">
-                    <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.24649.13510798887974550.6cd05e21-7b01-4369-8d30-5fc6b61e8c9c.a820aa3e-fe3a-41ac-a0a5-899d57c3c8af?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
-                </div>
-                <div class="item-body">
-                    <h4 class="item-title">TreeSize Free</h4>
-                    <p class="item-text"><small class="text-muted">tools</small></p>
-                    <p class="item-text">TreeSize Free tells you where precious disk space has gone</p>
-                    <a href="https://www.microsoft.com/store/productId/9NBLGGH40881" target="_blank" data-product-id="9NBLGGH40881" class="">安装</a>
-                    <pre class="code hide">winget install </pre>
-                    <button class=" hide" type="button" data-target="#preview-9NBLGGH40881">预览</button>
-                    <div id="preview-9NBLGGH40881" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="item-container shadow">
-                <div class="item-img">
-                    <img class="card-img rounded" src="https://store-images.s-microsoft.com/image/apps.44138.13649428968955623.2ac223c7-2391-4054-b8c5-cb5f317d5362.6ef51b9c-32fc-4f40-a5cc-7eee764d73d3?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7">
-                </div>
-                <div class="item-body">
-                    <h4 class="item-title">Files UWP</h4>
-                    <p class="item-text"><small class="text-muted">tools</small></p>
-                    <p class="item-text">Meet Files, an enthusiast take on what Windows File Explorer explorer should be.</p>
-                    <a href="https://www.microsoft.com/store/apps/9NGHP3DX8HDX" target="_blank" data-product-id="9NGHP3DX8HDX" class="">安装</a>
-                    <pre class="code hide">winget install </pre>
-                    <button class=" hide" type="button" data-target="#preview-9NGHP3DX8HDX">预览</button>
-                    <div id="preview-9NGHP3DX8HDX" class="collapse">
-                        
-                    </div>
-                </div>
-            </div>
-                        
-        </div>
-    </div>
 </body>
 
 </html>
