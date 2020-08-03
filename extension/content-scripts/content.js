@@ -27,6 +27,11 @@
       regex: /.?News.?/,
       value: "entertainment"
     }
+    ,
+    {
+      regex: /.?Persona.?/,
+      value: "tools"
+    }
   ];
 
   function cleanText(str) {
