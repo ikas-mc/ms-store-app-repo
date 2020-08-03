@@ -22,6 +22,10 @@
     {
       regex: /.?Productivity.?/,
       value: "productivity"
+    },
+    {
+      regex: /.?News.?/,
+      value: "entertainment"
     }
   ];
 
@@ -78,7 +82,11 @@
     };
     repo.name = cleanText($("#DynamicHeading_productTitle").text());
     repo.author = cleanText($("#publisher").text().trim());
-    repo.desc = cleanText($(".pi-product-description-text:first").text());
+    let desc = cleanText($(".pi-product-description-text:first").text());
+    if (desc && desc.length > 50) {
+      desc = desc.substring(0, 50);
+    }
+    repo.desc = desc;
     let category = cleanText($("#category .c-hyperlink").text());
     repo.category = convertCategory(cleanText(category));
     repo.productImage = $("#dynamicImage_productImage_picture img:last").attr("src");
