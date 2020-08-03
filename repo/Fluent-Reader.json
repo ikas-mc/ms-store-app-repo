@@ -1,0 +1,12 @@
+{
+    "name": "Fluent Reader",
+    "author": "Haoyuan Liu",
+    "price": "0",
+    "desc": "A modern desktop RSS reader. Open-source and cross-platform.The trial version of this app is unlimited and completely the same as the paid version, so please feel free to stick with it or buy the app as a type of donation.",
+    "category": "news & weather > news",
+    "url": "https://www.microsoft.com/store/productId/9p71fc94lrh8",
+    "productId": "9p71fc94lrh8",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.11124.14613414990586897.7487d06f-144b-45b7-bc2d-c7e4a18de077.afd21bf4-78d1-4bf4-97e5-74f56a8f43cb?mode=scale&q=90&h=270&w=270&background=%230078D7",
+    "previewImages": []
+}

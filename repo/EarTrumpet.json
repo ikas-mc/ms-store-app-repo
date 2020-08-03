@@ -1,0 +1,12 @@
+{
+    "name": "EarTrumpet",
+    "author": "File-New-Project",
+    "price": "0",
+    "desc": "EarTrumpet is a powerful volume control app for Windows",
+    "category": "tools",
+    "url": "https://www.microsoft.com/store/productId/9nblggh516xp",
+    "productId": "9nblggh516xp",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.45721.13510798887629242.2717342a-e94c-4305-9be9-8a93d0e18bdb.92f8396e-3154-42c6-b054-b233ef9aa015?mode=scale&q=90&h=270&w=270&background=%230078D7",
+    "previewImages": []
+}
