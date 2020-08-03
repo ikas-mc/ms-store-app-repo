@@ -1,5 +1,3 @@
-# ms-store-app-repo
-
 本项目用于收集windows 10 商店应用并生成推荐列表页面
 
 ## 列表页面:
