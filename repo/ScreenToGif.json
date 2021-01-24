@@ -1,0 +1,12 @@
+{
+    "name": "ScreenToGif",
+    "author": "Nicke",
+    "price": "0",
+    "desc": "Screen, webcam and board recorder with an integrat",
+    "category": "entertainment",
+    "url": "https://www.microsoft.com/store/productId/9n3sqk8pds8g",
+    "productId": "9n3sqk8pds8g",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.34519.13996311142145001.dc55add9-f666-4141-83c6-021cbb1f032a.6992820c-39ad-4e07-8ecd-3e3c9793d784?mode=scale&q=90&h=300&w=200",
+    "previewImages": []
+}

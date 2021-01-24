@@ -1,0 +1,12 @@
+{
+    "name": "eSheep 64bit",
+    "author": "Adriano",
+    "price": "0",
+    "desc": "Can you remember eSheep, the lovely desktop sheep?",
+    "category": "entertainment",
+    "url": "https://www.microsoft.com/store/productId/9mx2v0tqt6rm",
+    "productId": "9mx2v0tqt6rm",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.28379.13827883794030770.c67c857e-7ef9-4bcd-86e0-e1e07ef7f288.df6f6985-8eac-4c22-89df-36f22fd24fc5?mode=scale&q=90&h=270&w=270&background=%230078D7",
+    "previewImages": []
+}

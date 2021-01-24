@@ -1,0 +1,12 @@
+{
+    "name": "GWSL",
+    "author": "Opticos Studios",
+    "price": "0",
+    "desc": "GWSL is an XServer that lets you easily run graphical Linux apps on Windows 10 ",
+    "category": "tools",
+    "url": "https://www.microsoft.com/store/productId/9nl6kd1h33v3",
+    "productId": "9nl6kd1h33v3",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.25941.13713262882988084.dc2a6560-98e1-4dad-90b6-2122091e00a3.da902e13-c3d4-4a29-a717-f49d69d6435a?mode=scale&q=90&h=270&w=270&background=%23404040",
+    "previewImages": []
+}

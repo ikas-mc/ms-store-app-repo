@@ -1,0 +1,12 @@
+{
+    "name": "Bluetooth Audio Receiver",
+    "author": "Mark Smirnov",
+    "price": "0",
+    "desc": "This app allows you to use the latest version of W",
+    "category": "music",
+    "url": "https://www.microsoft.com/store/productId/9n9wclwdqs5j",
+    "productId": "9n9wclwdqs5j",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.25997.13525017478888913.c417a39c-6360-4c22-8b16-f93eb1df9f75.da69ece3-99ac-4d22-a65e-f730ee6d74f5?mode=scale&q=90&h=270&w=270&background=%230078D7",
+    "previewImages": []
+}

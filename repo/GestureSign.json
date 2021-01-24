@@ -1,0 +1,12 @@
+{
+    "name": "GestureSign",
+    "author": "TransposonY",
+    "price": "0",
+    "desc": "GestureSign is a gesture recognition software for ",
+    "category": "tools",
+    "url": "https://www.microsoft.com/store/productId/9n45wqvk2qqw",
+    "productId": "9n45wqvk2qqw",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.2156.13993755530821792.ab4f75b8-e1b6-41a7-8429-e26b89166286.f0b1b5d1-17aa-4739-80fd-8da0df4fd1e7?mode=scale&q=90&h=270&w=270&background=%231691f1",
+    "previewImages": []
+}

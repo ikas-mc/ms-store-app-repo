@@ -1,0 +1,12 @@
+{
+    "name": "WinDbg Preview",
+    "author": "Microsoft Corporation",
+    "price": "0",
+    "desc": "We've updated WinDbg to have more modern visuals, ",
+    "category": "dev",
+    "url": "https://www.microsoft.com/store/productId/9pgjgd53tn86",
+    "productId": "9pgjgd53tn86",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.39430.14179965677555945.4511bc55-f511-4c63-a99c-6ff01f7fb0af.3a6d737d-da45-47ff-b99c-6a9438490a7e?mode=scale&q=90&h=270&w=270&background=%23777777",
+    "previewImages": []
+}

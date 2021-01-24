@@ -1,0 +1,12 @@
+{
+    "name": "MottoMottoKawaii",
+    "author": "粤北山区的技术宅",
+    "price": "0",
+    "desc": "这又是一个因我兴趣而生的项目，利用几个月的业余时间完成，本播放器可以利用GPU即时的对视频进行美化处",
+    "category": "entertainment",
+    "url": "https://www.microsoft.com/store/productId/9mzltf0r5q19",
+    "productId": "9mzltf0r5q19",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.65089.13868084775059552.4e09bb19-5982-4001-a886-c3c5f6692b51.0eea401b-f9f4-4c38-a673-9b436ebe1879?mode=scale&q=90&h=270&w=270&background=white",
+    "previewImages": []
+}

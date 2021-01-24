@@ -1,0 +1,12 @@
+{
+    "name": "Battery Percentage Icon",
+    "author": "Soleon Innovation",
+    "price": "0",
+    "desc": "See your battery percentage, health, status, and o",
+    "category": "tools",
+    "url": "https://www.microsoft.com/store/productId/9pckt2b7dzmw",
+    "productId": "9pckt2b7dzmw",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.61274.14167996947755390.53e4250a-699c-4b0e-bce9-06fe27cd9560.d4193abf-db2e-4b52-b4d2-1ed8a4cfbe4b?mode=scale&q=90&h=270&w=270&background=%230078D7",
+    "previewImages": []
+}

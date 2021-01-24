@@ -1,0 +1,12 @@
+{
+    "name": "Windows File Recovery",
+    "author": "Microsoft Corporation",
+    "price": "0",
+    "desc": "Currently available for Windows 10 2004 and above.",
+    "category": "tools",
+    "url": "https://www.microsoft.com/store/productId/9n26s50ln705",
+    "productId": "9n26s50ln705",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.24219.13962106574996230.bf0d4490-07ff-4c8a-860e-26399fb1a8fb.a1a827be-0eb6-429d-b6d2-ac96df2f7fa6?mode=scale&q=90&h=270&w=270&background=%230078D4",
+    "previewImages": []
+}
