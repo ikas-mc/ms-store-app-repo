@@ -68,7 +68,7 @@
   }
 
   chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    debugger;
+    //debugger;
     if (request.cmd != "make") {
       return;
     }
