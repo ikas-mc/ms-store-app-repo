@@ -1,0 +1,12 @@
+{
+    "name": "哔哔",
+    "author": "未来代码研究所",
+    "price": "0",
+    "desc": "Watch your favorite short and long videos, follow ",
+    "category": "entertainment",
+    "url": "https://www.microsoft.com/store/productId/9pp3tx824g8l",
+    "productId": "9pp3tx824g8l",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.29745.14336265983894493.af8c1b18-5251-4968-af31-1c655d818a03.eab7a222-ed4e-41d3-8841-2fe547d2db6f?mode=scale&q=90&h=270&w=270&background=%230078D7",
+    "previewImages": []
+}

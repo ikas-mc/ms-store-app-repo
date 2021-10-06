@@ -1,0 +1,12 @@
+{
+    "name": "NanaZip",
+    "author": "Kenji Mouri",
+    "price": "0",
+    "desc": "NanaZip is an open source file archiver intended f",
+    "category": "tools",
+    "url": "https://www.microsoft.com/store/productId/9n8g7tscl18r",
+    "productId": "9n8g7tscl18r",
+    "winget": "winget install ",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.62582.14049914514725900.4bd37891-bd15-4773-b682-1e27448fa9cf.bc5a87b1-53ac-4d89-b276-8b3fb891d0f2?mode=scale&q=90&h=270&w=270&background=%230078D7",
+    "previewImages": []
+}
