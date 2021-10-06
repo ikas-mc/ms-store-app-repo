@@ -1,0 +1,12 @@
+{
+    "name": "Character Map UWP",
+    "author": "Edi Wang",
+    "price": "0",
+    "desc": "A modern, native UWP replacement for the Win32 Cha",
+    "category": "productivity",
+    "url": "https://www.microsoft.com/store/productId/9wzdncrdxf41",
+    "productId": "9wzdncrdxf41",
+    "winget": "winget install 9wzdncrdxf41",
+    "productImage": "https://store-images.s-microsoft.com/image/apps.62404.9007199266686090.97e17eba-5881-406a-807c-8e8eb684d64e.0a3adce3-ccbd-435e-aeb6-47c0c5fe7151?mode=scale&q=90&h=270&w=270&background=%230078D7",
+    "previewImages": []
+}
